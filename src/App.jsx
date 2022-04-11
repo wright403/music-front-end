@@ -21,6 +21,14 @@ function App() {
   }
   
   
+  async function createSong(newSong){
+    let response = await axios.post('http://127.0.0.1:8000/api/music/', newSong);
+    if(response.status === 201){
+      await getAllSongs();
+    }
+  }
+  
+  
   
   return (
     <div >
