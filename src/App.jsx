@@ -29,9 +29,16 @@ function App() {
   }
   
   
+  function filterSongs(searchTerm){
+   let filterResult = songs.filter()
+    // artist == searchTerm OR title == searchTerm  
+    // AFTER MVP: More sophisticated - change EQ to Contains
+  }
+  
   
   return (
     <div >
+      {/* <SearchBar filterSongs={filterSongs} /> */}
      <DisplayMusic songs={songs} />
     </div>
   );
