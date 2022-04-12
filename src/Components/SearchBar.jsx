@@ -1,15 +1,25 @@
-const SearchBar = ({filterSongs}) => {
+import React, { useState } from 'react';
 
-    const handleSubmit = () => {
-        // execute the callback 
-        filterSongs( filterfieldvalue )
-    }
+const SearchBar = ({getUserInput, userInput}) => {
+
+    
+    
+    
+    
+    
+    // function handleSubmit(event){
+    //     event.preventDefault();
+    //     let filterfieldvalue = {
+    //         filterfield: filterfield
+    //     }
+    //     filterSongs( filterfieldvalue )
+    
 
     return ( 
-        <form onSubmit={handleSubmit}>
+        <form>
             <div>
-                <label>filter</label>
-                <input name={filterfield} type='search'></input>
+                <label>Filter</label>
+                <input name={''} type='search' value={userInput} onChange={(event) => getUserInput(event)}/>
             </div>
         </form>
      );
